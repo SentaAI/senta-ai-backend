@@ -44,6 +44,8 @@ public class Leitura {
         this.dataHora = dataHora;
     }
 
+    //aqui é simples: positivo entrou mais gente do que saiu
+    //e negativo se saiu mais.
     public int getSaldo(){
         return entradas - saidas;
     }

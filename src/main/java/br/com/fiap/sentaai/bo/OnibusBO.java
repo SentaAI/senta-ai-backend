@@ -42,6 +42,7 @@ public class OnibusBO {
         return onibusDAO.save(new Onibus(req.placa(), req.capacidade(), linha));
     }
 
+
     @Transactional
     public Onibus atualizar(Long id, OnibusRequest req) {
         Onibus onibus = buscarPorId(id);
@@ -62,7 +63,8 @@ public class OnibusBO {
         onibusDAO.flush();
     }
 
-
+// neste caso seria a regra principal do nosso app, ele calcula a porcentagem de ocupaçao
+    // e decide se o onibus tem lugar, esta cheio ou lotado.
     public OcupacaoResponse calcularOcupacao(Onibus onibus) {
         int capacidade = onibus.getCapacidade();
         int ocupacao = onibus.getOcupacaoAtual();
