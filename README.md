@@ -78,6 +78,38 @@ Base URL: `https://senta-ai-backend.onrender.com`
 | 409 | Registro duplicado ou em uso por outra tabela |
 | 500 | Erro interno |
 
+
+## Tecnologias
+
+| Ferramenta | Versão |
+|---|---|
+| Java (JDK) | 21 |
+| Spring Boot | 4.1.2 |
+| Maven | 3.9 |
+| Oracle Database (FIAP) | 19c |
+| IntelliJ IDEA | 2026.2 |
+| Postman | testes dos endpoints |
+| Render | deploy (Docker) |
+
+## Como executar localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SentaAI/senta-ai-backend.git
+   ```
+2. Abra a pasta no IntelliJ e espere o Maven baixar as dependências
+3. Em **Run > Edit Configurations > Environment variables**, configure:
+DB_URL=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL;DB_USER=seu_rm;DB_PASSWORD=sua_senha
+
+4. Rode a classe `SentaaiApplication`. As tabelas são criadas automaticamente no Oracle
+5. Teste em `http://localhost:8080/linhas`
+
+## Deploy
+
+A API está publicada no Render: https://senta-ai-backend.onrender.com
+
+O plano gratuito desliga o servidor depois de 15 minutos sem uso, então a primeira requisição pode demorar cerca de 1 minuto.
+
 ## Integrantes
 
 | Nome | RM |
