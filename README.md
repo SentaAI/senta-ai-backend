@@ -115,3 +115,7 @@ O plano gratuito desliga o servidor depois de 15 minutos sem uso, então a prime
 | Nome | RM |
 |---|---|
 | Levi de Jesus | RM563279 |
+| Ulisses Abreu | RM562230 |
+| Luigi Borghi | RM563096 |
+| Arthur Berlofa Bosi | RM564438 |
+
